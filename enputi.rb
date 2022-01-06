@@ -5,28 +5,39 @@
 class Enputi < Formula
   desc "A self-developing tool"
   homepage "https://github.com/darabuchi/enputi"
-  version "0.0.6"
+  version "0.0.7"
   license "Mozilla"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/darabuchi/enputi/releases/download/v0.0.6/enputi_v0.0.6_darwin_amd64.tar.gz"
-    sha256 "61750ffa79eebee3996b9c957bdb7daad19361c9f2d914917f30e977ddc87958"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_darwin_arm64.tar.gz"
+      sha256 "e932ea2742ae96ef82001dc4f18c65717013dbc027dadf40d295685ec575ffee"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_darwin_amd64.tar.gz"
+      sha256 "7c0e0fb126d305c697ec774b41a14f066f8464cd39098266edf9ae8b4a6ab86d"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/darabuchi/enputi/releases/download/v0.0.6/enputi_v0.0.6_darwin_arm64.tar.gz"
-    sha256 "bbf1ccb5971086c492857a2e14433515b2cb0f9f9b146b01f80c2b392e1d1e00"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/darabuchi/enputi/releases/download/v0.0.6/enputi_v0.0.6_linux_amd64.tar.gz"
-    sha256 "de6ec2b07502a9e1a76b2be482bf4e185a765373cf237c3129335e0f06a39afe"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/darabuchi/enputi/releases/download/v0.0.6/enputi_v0.0.6_linux_arm64.tar.gz"
-    sha256 "56ee127c33ed22a014c8d4283fb08c0aa9a4ca1ede2e3f753dc585a39335d042"
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_linux_arm64.tar.gz"
+      sha256 "089432688579ebfdade65542d1f780062edce7d658ae233f5bc52b955d18328e"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_linux_amd64.tar.gz"
+      sha256 "5e295f06408f8ea50efda4f89ccb9d1a13fabe8b96a0762635b65c461fe91807"
+    end
   end
 
   def install
     bin.install "enputi"
+    bin.install "mini-enputi"
+    bin.install "checkwall"
+    bin.install "proxycheck"
+    bin.install "unlockcheck"
+    bin.install "tohru"
+    bin.install "dnsquerygi"
   end
 end
