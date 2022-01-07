@@ -12,22 +12,22 @@ class Enputi < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_darwin_arm64.tar.gz"
-      sha256 "e932ea2742ae96ef82001dc4f18c65717013dbc027dadf40d295685ec575ffee"
+      sha256 "b9f2d8de7042ecf4b05f4239e43a5088d36b6d96808656a8b40f8f63208fd53b"
     end
     if Hardware::CPU.intel?
       url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_darwin_amd64.tar.gz"
-      sha256 "7c0e0fb126d305c697ec774b41a14f066f8464cd39098266edf9ae8b4a6ab86d"
+      sha256 "0e72cd1310a62b71616b2e17c8690124675ede52587e78317fd50a81978d73f4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_linux_arm64.tar.gz"
-      sha256 "089432688579ebfdade65542d1f780062edce7d658ae233f5bc52b955d18328e"
+      sha256 "345b6c0bc67fc60a0e0aab3acc6ac806893e77e88905ef31f00f2c7344e95c0e"
     end
     if Hardware::CPU.intel?
       url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_linux_amd64.tar.gz"
-      sha256 "5e295f06408f8ea50efda4f89ccb9d1a13fabe8b96a0762635b65c461fe91807"
+      sha256 "9efad15febc0cec44e17d7593fce107ee1aa0f7e4f76ad5d82ce74915600ac34"
     end
   end
 
