@@ -5,29 +5,29 @@
 class Enputi < Formula
   desc "A self-developing tool"
   homepage "https://github.com/darabuchi/enputi"
-  version "0.0.7"
+  version "0.0.8"
   license "Mozilla"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_darwin_arm64.tar.gz"
-      sha256 "b9f2d8de7042ecf4b05f4239e43a5088d36b6d96808656a8b40f8f63208fd53b"
+      url "https://github.com/darabuchi/enputi/releases/download/v0.0.8/enputi_v0.0.8_darwin_arm64.tar.gz"
+      sha256 "a6717414040722b5c602ddb69fc3be85892c2d6f87c1d0ffd3d655989b0471e8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_darwin_amd64.tar.gz"
-      sha256 "0e72cd1310a62b71616b2e17c8690124675ede52587e78317fd50a81978d73f4"
+      url "https://github.com/darabuchi/enputi/releases/download/v0.0.8/enputi_v0.0.8_darwin_amd64.tar.gz"
+      sha256 "279f26221acf1cdea0f023d912fa6fe5b15c6a151bf876b93a123d891c274d52"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_linux_arm64.tar.gz"
-      sha256 "345b6c0bc67fc60a0e0aab3acc6ac806893e77e88905ef31f00f2c7344e95c0e"
+      url "https://github.com/darabuchi/enputi/releases/download/v0.0.8/enputi_v0.0.8_linux_arm64.tar.gz"
+      sha256 "4e016c7e91fb0574abb3a70f9fe16bed5ad58a42829ad6c16d1e2a421df769ad"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/darabuchi/enputi/releases/download/v0.0.7/enputi_v0.0.7_linux_amd64.tar.gz"
-      sha256 "9efad15febc0cec44e17d7593fce107ee1aa0f7e4f76ad5d82ce74915600ac34"
+      url "https://github.com/darabuchi/enputi/releases/download/v0.0.8/enputi_v0.0.8_linux_amd64.tar.gz"
+      sha256 "7050e0890cc800e583bb4015785f272461453501e9bf8c580b6617af4a933b66"
     end
   end
 
